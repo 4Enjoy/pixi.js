@@ -12,7 +12,7 @@
 var core = module.exports = Object.assign(require('./const'), require('./math'), {
     // utils
     utils: require('./utils'),
-    ticker: require('./ticker'),
+    //ticker: require('./ticker'),
 
     // display
     DisplayObject:          require('./display/DisplayObject'),
@@ -20,45 +20,45 @@ var core = module.exports = Object.assign(require('./const'), require('./math'),
 
     // sprites
     Sprite:                 require('./sprites/Sprite'),
-    ParticleContainer:      require('./particles/ParticleContainer'),
+    //ParticleContainer:      require('./particles/ParticleContainer'),
     SpriteRenderer:         require('./sprites/webgl/SpriteRenderer'),
-    ParticleRenderer:       require('./particles/webgl/ParticleRenderer'),
+    //ParticleRenderer:       require('./particles/webgl/ParticleRenderer'),
 
     // text
     Text:                   require('./text/Text'),
 
     // primitives
     Graphics:               require('./graphics/Graphics'),
-    GraphicsData:           require('./graphics/GraphicsData'),
-    GraphicsRenderer:       require('./graphics/webgl/GraphicsRenderer'),
+    //GraphicsData:           require('./graphics/GraphicsData'),
+    //GraphicsRenderer:       require('./graphics/webgl/GraphicsRenderer'),
 
     // textures
     Texture:                require('./textures/Texture'),
-    BaseTexture:            require('./textures/BaseTexture'),
+    //BaseTexture:            require('./textures/BaseTexture'),
     RenderTexture:          require('./textures/RenderTexture'),
-    VideoBaseTexture:       require('./textures/VideoBaseTexture'),
-    TextureUvs:             require('./textures/TextureUvs'),
+    //VideoBaseTexture:       require('./textures/VideoBaseTexture'),
+    //TextureUvs:             require('./textures/TextureUvs'),
 
     // renderers - canvas
     CanvasRenderer:         require('./renderers/canvas/CanvasRenderer'),
-    CanvasGraphics:         require('./renderers/canvas/utils/CanvasGraphics'),
-    CanvasBuffer:           require('./renderers/canvas/utils/CanvasBuffer'),
+    //CanvasGraphics:         require('./renderers/canvas/utils/CanvasGraphics'),
+    //CanvasBuffer:           require('./renderers/canvas/utils/CanvasBuffer'),
 
     // renderers - webgl
     WebGLRenderer:          require('./renderers/webgl/WebGLRenderer'),
-    WebGLManager:           require('./renderers/webgl/managers/WebGLManager'),
-    ShaderManager:          require('./renderers/webgl/managers/ShaderManager'),
-    Shader:                 require('./renderers/webgl/shaders/Shader'),
-    TextureShader:          require('./renderers/webgl/shaders/TextureShader'),
-    PrimitiveShader:        require('./renderers/webgl/shaders/PrimitiveShader'),
-    ComplexPrimitiveShader: require('./renderers/webgl/shaders/ComplexPrimitiveShader'),
-    ObjectRenderer:         require('./renderers/webgl/utils/ObjectRenderer'),
-    RenderTarget:           require('./renderers/webgl/utils/RenderTarget'),
+    //WebGLManager:           require('./renderers/webgl/managers/WebGLManager'),
+    //ShaderManager:          require('./renderers/webgl/managers/ShaderManager'),
+    //Shader:                 require('./renderers/webgl/shaders/Shader'),
+    //TextureShader:          require('./renderers/webgl/shaders/TextureShader'),
+    //PrimitiveShader:        require('./renderers/webgl/shaders/PrimitiveShader'),
+    //ComplexPrimitiveShader: require('./renderers/webgl/shaders/ComplexPrimitiveShader'),
+    //ObjectRenderer:         require('./renderers/webgl/utils/ObjectRenderer'),
+    //RenderTarget:           require('./renderers/webgl/utils/RenderTarget'),
 
     // filters - webgl
-    AbstractFilter:         require('./renderers/webgl/filters/AbstractFilter'),
-    FXAAFilter:             require('./renderers/webgl/filters/FXAAFilter'),
-    SpriteMaskFilter:       require('./renderers/webgl/filters/SpriteMaskFilter'),
+    //AbstractFilter:         require('./renderers/webgl/filters/AbstractFilter'),
+    //FXAAFilter:             require('./renderers/webgl/filters/FXAAFilter'),
+    //SpriteMaskFilter:       require('./renderers/webgl/filters/SpriteMaskFilter'),
 
     /**
      * This helper function will automatically detect which renderer you should be using.
