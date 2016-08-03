@@ -1,7 +1,7 @@
 var Resource = require('resource-loader').Resource,
     path = require('path'),
     core = require('../core'),
-    async = require('async');
+    async_whilst = require('async/whilst');
 
 var BATCH_SIZE = 1000;
 
@@ -110,7 +110,7 @@ module.exports = function ()
             }
             else
             {
-                async.whilst(shouldProcessNextBatch, processNextBatch, next);
+                async_whilst(shouldProcessNextBatch, processNextBatch, next);
             }
         });
     };

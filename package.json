@@ -30,13 +30,13 @@
     "README.md"
   ],
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^2.0.0",
     "brfs": "^1.4.1",
     "browserify-versionify": "^1.0.6",
     "earcut": "^2.0.8",
     "eventemitter3": "^1.1.1",
     "object-assign": "^4.0.1",
-    "resource-loader": "^1.6.4"
+    "resource-loader": "git://github.com/4Enjoy/resource-loader.git#199635fc2dc7a1d1e34530e1ee96b5988962543b"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
