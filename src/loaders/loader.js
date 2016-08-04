@@ -1,7 +1,7 @@
 var ResourceLoader = require('resource-loader'),
-    textureParser = require('./textureParser'),
-    spritesheetParser = require('./spritesheetParser'),
-    bitmapFontParser = require('./bitmapFontParser');
+    textureParser = require('./textureParser');
+    //spritesheetParser = require('./spritesheetParser'),
+    //bitmapFontParser = require('./bitmapFontParser');
 
 /**
  *
@@ -45,9 +45,9 @@ Loader._pixiMiddleware = [
     // parse any Image objects into textures
     textureParser,
     // parse any spritesheet data into multiple textures
-    spritesheetParser,
+    //spritesheetParser,
     // parse any spritesheet data into multiple textures
-    bitmapFontParser
+    //bitmapFontParser
 ];
 
 Loader.addPixiMiddleware = function (fn) {
