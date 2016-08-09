@@ -13,6 +13,7 @@ function polyfill_mathSign() {
 polyfill_ObjectAssign();
 //polyfill_requestAnimationFrame();
 polyfill_mathSign();
+require('./TypedArray');
 
 
 
