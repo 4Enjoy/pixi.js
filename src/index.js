@@ -1,28 +1,35 @@
+function backgroundRAF(callback) {
+    setTimeout(callback, 16);
+}
+window.backgroundRAF = backgroundRAF;
+
 // run the polyfills
 require('./polyfill/requestAnimationFrame');
 
 window.PIXI_loaded = false;
+
 window.onPixiReady = function (callback) {
     function check() {
         if (PIXI_loaded) {
             return callback();
         } else {
-            requestAnimationFrame(check);
+            //do not use animation frame to load in background
+            backgroundRAF(check);
         }
     }
 
     check();
 };
 
-requestAnimationFrame(function () {
-    requestAnimationFrame(function PIXI_polifill() {
+backgroundRAF(function () {
+    backgroundRAF(function PIXI_polifill() {
         require('./polyfill');
-        requestAnimationFrame(function PIXI_core() {
+        backgroundRAF(function PIXI_core() {
             var core = null;
             require('./core').init(function (result) {
                 core = result;
 
-                requestAnimationFrame(function PIXI_modules() {
+                backgroundRAF(function PIXI_modules() {
                     // add core plugins.
                     //core.extras         = require('./extras');
                     //core.filters        = require('./filters');
@@ -31,7 +38,7 @@ requestAnimationFrame(function () {
                     //core.mesh           = require('./mesh');
                     //core.accessibility  = require('./accessibility');
 
-                    requestAnimationFrame(function PIXI_loaders() {
+                    backgroundRAF(function PIXI_loaders() {
 
 // export a premade loader instance
                         /**
