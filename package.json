@@ -36,7 +36,7 @@
     "earcut": "^2.0.8",
     "eventemitter3": "^1.1.1",
     "object-assign": "^4.0.1",
-    "resource-loader": "git://github.com/4Enjoy/resource-loader.git#199635fc2dc7a1d1e34530e1ee96b5988962543b"
+    "resource-loader": "git://github.com/4Enjoy/resource-loader.git#c14c70a29d035a0e979c0bd2d1379f57f7dcb52d"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
