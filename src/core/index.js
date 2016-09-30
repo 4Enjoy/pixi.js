@@ -107,22 +107,22 @@ function init(callback) {
     require('./const');
     require('./math');
 
-    backgroundRAF(function PIXI_Core_A(){
+    requestAnimationFrame(function PIXI_Core_A(){
         require('./utils');
         //ticker: require('./ticker'),
 
-        backgroundRAF(function PIXI_Core_B() {
+        requestAnimationFrame(function PIXI_Core_B() {
 
             // display
             require('./display/DisplayObject');
             require('./display/Container');
 
-            backgroundRAF(function PIXI_Core_C() {
+            requestAnimationFrame(function PIXI_Core_C() {
                 // sprites
                 require('./sprites/Sprite');
                 require('./sprites/webgl/SpriteRenderer');
 
-                backgroundRAF(function PIXI_Core_D() {
+                requestAnimationFrame(function PIXI_Core_D() {
                     // text
                     require('./text/Text');
 
@@ -153,7 +153,7 @@ function init(callback) {
                     require('./renderers/webgl/utils/ObjectRenderer');
                     require('./renderers/webgl/utils/RenderTarget');
 
-                    backgroundRAF(function PIXI_Core_Final() {
+                    requestAnimationFrame(function PIXI_Core_Final() {
                         callback(buildCore());
                     })
                 });
