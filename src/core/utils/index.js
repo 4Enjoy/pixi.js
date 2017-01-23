@@ -89,13 +89,18 @@ var utils = module.exports = {
         canvas.height = 1;
 
         var context = canvas.getContext('2d');
-        context.globalCompositeOperation = 'multiply';
-        context.drawImage(magenta, 0, 0);
-        context.drawImage(yellow, 2, 0);
+        try {
+            context.globalCompositeOperation = 'multiply';
+            context.drawImage(magenta, 0, 0);
+            context.drawImage(yellow, 2, 0);
 
-        var data = context.getImageData(2,0,1,1).data;
+            var data = context.getImageData(2,0,1,1).data;
 
-        return (data[0] === 255 && data[1] === 0 && data[2] === 0);
+            return (data[0] === 255 && data[1] === 0 && data[2] === 0);
+        } catch(err) {
+            console.warn(err);
+        }
+        return false;
     },
 
     /**
