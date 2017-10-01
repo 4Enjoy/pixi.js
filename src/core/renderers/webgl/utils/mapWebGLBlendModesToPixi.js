@@ -37,5 +37,7 @@ export default function mapWebGLBlendModesToPixi(gl, array = [])
     array[BLEND_MODES.ADD_NPM] = [gl.SRC_ALPHA, gl.DST_ALPHA, gl.ONE, gl.DST_ALPHA];
     array[BLEND_MODES.SCREEN_NPM] = [gl.SRC_ALPHA, gl.ONE_MINUS_SRC_COLOR, gl.ONE, gl.ONE_MINUS_SRC_COLOR];
 
+    array[BLEND_MODES.SUBTRACT] = [gl.ZERO, gl.ONE_MINUS_SRC_ALPHA];
+
     return array;
 }

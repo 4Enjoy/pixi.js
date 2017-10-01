@@ -31,6 +31,7 @@ export default function mapCanvasBlendModesToPixi(array = [])
         array[BLEND_MODES.SATURATION] = 'saturate';
         array[BLEND_MODES.COLOR] = 'color';
         array[BLEND_MODES.LUMINOSITY] = 'luminosity';
+        array[BLEND_MODES.SUBTRACT] = "destination-out";
     }
     else
     {
@@ -52,6 +53,7 @@ export default function mapCanvasBlendModesToPixi(array = [])
         array[BLEND_MODES.SATURATION] = 'source-over';
         array[BLEND_MODES.COLOR] = 'source-over';
         array[BLEND_MODES.LUMINOSITY] = 'source-over';
+        array[BLEND_MODES.SUBTRACT] = "destination-out";
     }
     // not-premultiplied, only for webgl
     array[BLEND_MODES.NORMAL_NPM] = array[BLEND_MODES.NORMAL];
