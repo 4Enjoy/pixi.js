@@ -12,7 +12,7 @@ import * as extract from './extract';
 //import * as filters from './filters';
 import * as interaction from './interaction';
 import * as loaders from './loaders';
-//import * as mesh from './mesh';
+import * as mesh from './mesh';
 //import * as particles from './particles';
 import * as prepare from './prepare';
 
@@ -35,7 +35,7 @@ export {
     //filters,
     interaction,
     loaders,
-    //mesh,
+    mesh,
     //particles,
     prepare,
     loader,
